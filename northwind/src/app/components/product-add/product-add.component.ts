@@ -40,7 +40,9 @@ export class ProductAddComponent implements OnInit {
       responseError=>{
         if(responseError.error.Errors.length > 0)
         {
-          this.toastrService.error(responseError.error.Errors,"Validation Error")
+          for (let i = 0; i < responseError.error.Errors.length; i++) {
+            this.toastrService.error(responseError.error.Errors[i].ErrorMessage,"Validation Error")
+          }
         }
       })
     }
