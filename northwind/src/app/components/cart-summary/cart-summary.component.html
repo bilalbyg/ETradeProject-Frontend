@@ -10,7 +10,7 @@
           <span (click)="removeFromCart(cartItem.product)" class="badge bg-secondary mr-5 ml-6">Delete</span>
         </a>
     </li>
-      <li *ngIf="cartItems"><hr class="dropdown-divider"></li>
+      <li *ngIf="cartItems.length > 0"><hr class="dropdown-divider"></li>
       <li><a class="dropdown-item">Go to Cart</a></li>
     </ul>
   </li>
